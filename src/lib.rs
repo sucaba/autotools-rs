@@ -58,6 +58,7 @@ use std::path::{Path, PathBuf};
 use std::process::Command;
 use std::str;
 
+#[derive(Debug)]
 enum Kind {
     Enable,
     Disable,
@@ -104,6 +105,7 @@ enum Kind {
 /// println!("cargo:rustc-link-search=native={}", dst.display());
 /// println!("cargo:rustc-link-lib=static=foo");
 /// ```
+#[derive(Debug)]
 pub struct Config {
     enable_shared: bool,
     enable_static: bool,
